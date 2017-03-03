@@ -20,6 +20,7 @@ describe('generateLocationMessage', () => {
     var url = `https://www.google.com.au/maps/?q=${lat},${long}`;
     var res = generateLocationMessage(from, lat, long)
     expect(res).toInclude({from, url})
+    console.log(res.createdAt);
     expect(res.createdAt).toBeA('number')
   })
 })
